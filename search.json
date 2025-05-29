@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "gettingstarted.html",
+    "href": "gettingstarted.html",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gettingstarted.html#quarto",
+    "href": "gettingstarted.html#quarto",
+    "title": "Getting Started",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org."
+  },
+  {
+    "objectID": "gettingstarted.html#running-code",
+    "href": "gettingstarted.html#running-code",
+    "title": "Getting Started",
+    "section": "Running Code",
+    "text": "Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2\n\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).\n\nlibrary(palmerpenguins)\n\n\nAttaching package: 'palmerpenguins'\n\n\nThe following objects are masked from 'package:datasets':\n\n    penguins, penguins_raw\n\n\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(gt)\n\npenguins |&gt;\n  group_by(island) |&gt;\n  summarise(mean_body_mass_g = mean(body_mass_g, na.rm = TRUE)) |&gt;\n  gt() |&gt; \n  fmt_number(mean_body_mass_g) |&gt;\n  cols_label(island = \"Island\",\n             mean_body_mass_g = \"Mean Body Mass (g)\") |&gt;\n  cols_align(columns = island, align = \"left\")\n\n\n\nTable 1: Penguin\n\n\n\n\n\n\n\n\n\nIsland\nMean Body Mass (g)\n\n\n\n\nBiscoe\n4,716.02\n\n\nDream\n3,712.90\n\n\nTorgersen\n3,706.37\n\n\n\n\n\n\n\n\n\n\nrefer to Table 1"
+  }
+]
